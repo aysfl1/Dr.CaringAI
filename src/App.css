@@ -1,0 +1,422 @@
+/* Global Styles */
+:root {
+  --primary: #1A9CB0;       /* Teal blue - trustworthy, calming */
+  --primary-light: #E5F5F7; /* Light teal for backgrounds */
+  --secondary: #6D60F8;     /* Soft purple - innovation, technology */
+  --secondary-light: #F0EFFE; /* Light purple */
+  --accent: #2CC09C;        /* Mint green - healing, freshness */
+  --dark: #2D3748;          /* Dark slate for text */
+  --light: #F7FAFC;         /* Off-white for backgrounds */
+  --gray: #718096;          /* Medium gray for secondary text */
+  --light-gray: #EDF2F7;    /* Light gray for borders and dividers */
+  --danger: #E53E3E;        /* Red for warnings/errors */
+  --success: #38A169;       /* Green for success messages */
+  --warning: #ED8936;       /* Orange for caution messages */
+  --info: #4299E1;          /* Blue for info messages */
+}
+
+body {
+  background-color: var(--light);
+  color: var(--dark);
+  font-family: 'Inter', 'Roboto', 'Segoe UI', 'Arial', sans-serif;
+  line-height: 1.6;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Card Styles */
+.card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  background-color: white;
+  border-bottom: 1px solid var(--light-gray);
+  font-weight: 600;
+  padding: 1.25rem 1.5rem;
+}
+
+/* Button Styles */
+.btn {
+  border-radius: 8px;
+  padding: 0.5rem 1.25rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-primary:hover {
+  background-color: #158799;
+  border-color: #158799;
+  box-shadow: 0 4px 8px rgba(26, 156, 176, 0.25);
+}
+
+.btn-secondary {
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+}
+
+.btn-secondary:hover {
+  background-color: #5a50dc;
+  border-color: #5a50dc;
+  box-shadow: 0 4px 8px rgba(109, 96, 248, 0.25);
+}
+
+.btn-outline-primary {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary);
+  color: white;
+  box-shadow: 0 4px 8px rgba(26, 156, 176, 0.25);
+}
+
+/* Form Styles */
+.form-control {
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--light-gray);
+  font-size: 1rem;
+}
+
+.form-control:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 0.2rem rgba(26, 156, 176, 0.25);
+}
+
+.form-label {
+  font-weight: 500;
+  color: var(--dark);
+  margin-bottom: 0.5rem;
+}
+
+/* Chat Styles */
+.chat-container {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 1rem;
+}
+
+.chat-bubble {
+  max-width: 75%;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+  border-radius: 18px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  line-height: 1.5;
+}
+
+.ai-bubble {
+  background-color: var(--primary-light);
+  color: var(--dark);
+  border-top-left-radius: 4px;
+  border-left: 3px solid var(--primary);
+}
+
+.user-bubble {
+  background-color: var(--secondary-light);
+  color: var(--dark);
+  border-top-right-radius: 4px;
+  border-right: 3px solid var(--secondary);
+}
+
+/* Table Styles */
+.table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+}
+
+.table thead th {
+  border-bottom: 2px solid var(--light-gray);
+  font-weight: 600;
+  color: var(--dark);
+  padding: 1rem;
+}
+
+.table tbody td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.table tbody tr:hover {
+  background-color: var(--primary-light);
+}
+
+/* Badge Styles */
+.badge {
+  font-weight: 500;
+  padding: 0.35em 0.65em;
+  border-radius: 6px;
+}
+
+.badge-primary {
+  background-color: var(--primary-light);
+  color: var(--primary);
+}
+
+.badge-secondary {
+  background-color: var(--secondary-light);
+  color: var(--secondary);
+}
+
+/* Spinner Styles */
+.spinner-border {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-width: 0.2em;
+  color: var(--primary);
+}
+
+/* Navbar Styles */
+.navbar {
+  padding: 1rem 1.5rem;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand img {
+  height: 32px;
+  margin-right: 0.75rem;
+}
+
+/* Dropdown Styles */
+.dropdown-menu {
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 0.5rem;
+}
+
+.dropdown-item {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.dropdown-item:hover {
+  background-color: var(--primary-light);
+  color: var(--primary);
+}
+
+/* Accordion Styles */
+.accordion-button:not(.collapsed) {
+  background-color: var(--primary-light);
+  color: var(--primary);
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+  border-color: var(--primary-light);
+}
+
+/* Progress Bar Styles */
+.progress {
+  height: 0.75rem;
+  border-radius: 1rem;
+  background-color: var(--light-gray);
+  overflow: hidden;
+}
+
+.progress-bar {
+  background-color: var(--primary);
+  border-radius: 1rem;
+}
+
+/* Custom Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+/* Healthcare specific elements */
+.health-icon-container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: var(--primary-light);
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.health-card {
+  transition: all 0.3s ease;
+  border-top: 4px solid transparent;
+}
+
+.health-card:hover {
+  border-top-color: var(--primary);
+}
+
+.health-feature-card {
+  border-radius: 12px;
+  padding: 1.75rem;
+  height: 100%;
+  text-align: center;
+  border: none;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.health-feature-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+/* Consultation progress indicator */
+.consultation-progress {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.consultation-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  flex: 1;
+}
+
+.consultation-step-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--light-gray);
+  color: var(--gray);
+  font-weight: 600;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 8px;
+}
+
+.consultation-step.active .consultation-step-number {
+  background-color: var(--primary);
+  color: white;
+}
+
+.consultation-step.completed .consultation-step-number {
+  background-color: var(--success);
+  color: white;
+}
+
+.consultation-step-text {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--gray);
+  text-align: center;
+}
+
+.consultation-step.active .consultation-step-text {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.consultation-step::after {
+  content: '';
+  position: absolute;
+  top: 18px;
+  left: 50%;
+  width: 100%;
+  height: 2px;
+  background-color: var(--light-gray);
+  z-index: 1;
+}
+
+.consultation-step:last-child::after {
+  display: none;
+}
+
+.consultation-step.completed::after {
+  background-color: var(--success);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+  
+  .chat-bubble {
+    max-width: 85%;
+  }
+
+  .consultation-step-text {
+    font-size: 0.75rem;
+  }
+}
+
+/* Activity Chart Placeholder Styles */
+.activity-placeholder {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  height: 120px;
+  margin: 20px 0;
+}
+
+.activity-placeholder .bar {
+  width: 40px;
+  background-color: #007bff;
+  opacity: 0.7;
+  border-radius: 4px 4px 0 0;
+  transition: height 0.3s ease;
+}
+
+.activity-placeholder .bar:hover {
+  opacity: 1;
+}
+
+/* Fix for content being hidden under fixed navbar */
+.content-container {
+  padding-top: 100px; /* Increased padding to account for navbar height */
+}
